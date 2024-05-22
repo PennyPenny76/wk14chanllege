@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome, {{user.username}}!</h2>
+  </div>
+</div>
+
+<div class="card post mb-3">
+  <div class="card-header post-title-homepage p-3 text-white" style="background:#669e9a;">
+    <h4>
+      {{{get_emoji}}}
+      <a class="text-white"><strong>{{title}}</strong></a>
+    </h4>
+  </div>
+  <div class="card-body p-4">
+    <p class="card-text"><strong>{{content}}</strong></p>
+    <p class="display-7">- Created by {{user.username}} on {{format_date date_created}}</p>
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-md-12">
+    <h3>Create a New Comment:</h3>
+
+    <form class="form new-comment-form" id="new-post-comment" data-id="{{id}}">
+      <div class="form-group">
+        <label for="new-comment">Comment content:</label>
+        <input class="form-input" type="text" id="new-comment" name="new-comment" />
+      </div>
+      <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-new-comment text-white"style="background:#669e9a;">+ CREATE</button>
+      </div>
+    </form>
+  </div>
+  
+  
+</div>
+
+<script src="../../../js/newcomment.js"></script>

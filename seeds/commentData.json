@@ -1,0 +1,32 @@
+[
+  {
+    "content": "Good one.",
+    "post_id": 1,
+    "user_id": 2
+  },
+  {
+    "content": "It's nice.",
+    "post_id": 1,
+    "user_id": 3
+  },
+  {
+    "content": "Looking forword.",
+    "post_id": 2,
+    "user_id": 1
+  },
+  {
+    "content": "It's going to be a great app.",
+    "post_id": 2,
+    "user_id": 3
+  },
+  {
+    "content": "It will be successful.",
+    "post_id": 3,
+    "user_id": 1
+  },
+  {
+    "content": "It's very useful.",
+    "post_id": 3,
+    "user_id": 2
+  }
+]

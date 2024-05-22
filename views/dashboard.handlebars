@@ -1,0 +1,45 @@
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome, {{username}}!</h2>
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-md-12">
+
+    {{#if posts.length}}
+    <div class="col-md-12 post-list">
+      <h5>Posts:</h5>
+
+    {{#each posts as |post|}}
+      <div class="card post mb-3">
+        <div class="container card-header post-title-homepage p-3 text-white" style="background:#669e9a;">
+          <div class="row justify-content-between">
+            <h4 class="col-4">
+              {{{get_emoji}}}
+              <a class="text-white" href="/post/{{post.id}}"><strong>{{post.title}}</strong></a>
+            </h4>
+            <div class="col-auto">
+              <button class="btn btn-sm btn-danger" data-id="{{post.id}}">DELETE</button>
+            </div>
+          </div>
+        </div>
+        <div class="container card-body p-4">
+          <div class="row justify-content-between">
+            <p class="col-8 card-text"><strong>{{post.content}}</strong></p>
+            <p class="col-auto display-7">- Created on {{format_date post.date_created}}</p>
+          </div>
+        </div>
+        
+      </div>
+      
+    {{/each}}
+    </div>
+    {{/if}}
+
+    <div class="form-group d-grid gap-2">
+        <button class="btn btn-new-post text-white"style="background:#669e9a;"type="button"id="new-post-btn">+ NEW POST</button>
+    </div>
+</div>
+
+<script src="./js/dashboard.js"></script>
