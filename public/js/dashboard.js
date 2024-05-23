@@ -19,6 +19,15 @@ document.getElementById('new-post-btn').addEventListener('click', () => {
   window.location.href = '/dashboard/newpost';
 });
 
-document
-  .querySelector('.post-list')
-  .addEventListener('click', delButtonHandler);
+document.querySelectorAll('[id^="btn-delete-"]').forEach(button => {
+  button.addEventListener('click', delButtonHandler);
+});
+
+document.querySelectorAll('[id^="btn-update-"]').forEach(button => {
+  button.addEventListener('click', (event) => {
+    const id = event.target.getAttribute('data-id');
+    window.location.href = `/dashboard/editpost/${id}`;
+  });
+});
+
+

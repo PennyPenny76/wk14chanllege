@@ -15,12 +15,20 @@
       <div class="card post mb-3">
         <div class="container card-header post-title-homepage p-3 text-white" style="background:#669e9a;">
           <div class="row justify-content-between">
-            <h4 class="col-4">
+            <h4 class="col-9">
               {{{get_emoji}}}
               <a class="text-white" href="/post/{{post.id}}"><strong>{{post.title}}</strong></a>
             </h4>
-            <div class="col-auto">
-              <button class="btn btn-sm btn-danger" data-id="{{post.id}}">DELETE</button>
+            
+            <div class="container col-auto">
+              <div class="row justify-content-between">
+                <div class="col-auto">
+                  <button class="btn btn-sm btn-danger" id="btn-delete-{{post.id}}" data-id="{{post.id}}">DELETE</button>
+                </div>
+                <div class="col-auto">
+                  <button class="btn btn-sm btn-danger"id="btn-update-{{post.id}}" data-id="{{post.id}}">UPDATE</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
